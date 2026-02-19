@@ -46,12 +46,12 @@ public class FiboC {
                 for (int k = 0; k < mtrN.length; k++) {
                     temp[i][k] = 0;
                     for (int j = 0; j < mtrN.length; j++)
-                        temp[i][k] = (temp[i][k] + mtrN[i][j] * mtrN[i][j]) % m;
+                        temp[i][k] = (temp[i][k] + mtrN[i][j] * mtrN[j][k]) % m;
                 }
             for (int i = 0; i < mtrN.length; i++)
                 for (int j = 0; j < mtrN.length; j++)
                     mtrN[i][j] = temp[i][j];
-            n /= 1;
+            n /= 2;
         }
         return ed[0][1];
     }
